@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* Variable */
+:root {
+    --main-color: #0066FF;
+    --main-color-hover: #004ab9;
+    --main-color-dark: #17283b;
+    --success: #00B73F;
+    --success-hover: #008b31;
+    --secondary-color: #A2A2A2;
+    --secondary-color-hover: #747474;
+    --sectina-padding: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI';
+    background-color: rgb(255, 243, 243);
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "head head head head"
+        "sid1 cont cont sid2"
+        "footer footer footer footer";
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+}
+
+
+
+
+.container header {
+    border: 1px solid;
+    grid-area: head;
+    padding: 20px;
+}
+
+.container .content {
+    grid-area: cont;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.container .sidebar1 {
+    grid-area: sid1;
+    border: 1px solid;
+    padding: 20px;
+}
+.container .sidebar2 {
+    grid-area: sid2;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.container footer {
+    grid-area: footer;
+    border: 1px solid;
+    padding: 20px;
+}
+
+/* header */
+
+
+/* up button */
+.up {
+    position: fixed;
+    color: white;
+    bottom: 20px;
+    right: -50px;
+    background-color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
+    transition: 0.3s ease-in;
+
+}
+
+.up:hover {
+    background-color: var(--main-color-hover);
+    margin-bottom: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.up.show {
+    right: 30px;
+}
